@@ -1,5 +1,5 @@
-import { mount } from "products/ProductsIndex";
-import "carts/CartShow";
-console.log("Container");
+import { mount as productsMount } from "products/ProductsIndex";
+import { mount as cartsMount } from "carts/CartShow";
 
-mount(document.querySelector("#dev-products"));
+productsMount(document.querySelector("#dev-products"));
+cartsMount(document.querySelector("#dev-carts"));
