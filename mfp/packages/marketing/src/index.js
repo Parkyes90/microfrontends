@@ -1,1 +1,1 @@
-console.log("hj there");
+import "./bootstrap";

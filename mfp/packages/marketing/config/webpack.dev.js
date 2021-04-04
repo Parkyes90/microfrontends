@@ -16,4 +16,5 @@ const devConfig = {
   ],
 };
 
+// noinspection JSCheckFunctionSignatures
 module.exports = merge(commonConfig, devConfig);
