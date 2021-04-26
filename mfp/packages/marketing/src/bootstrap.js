@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import App from "./App";
 
 // mount
 const mount = (el) => {
-  ReactDOM.render(<h1>Hi There</h1>, el);
+  ReactDOM.render(<App />, el);
 };
 // immediately
 if (process.env.NODE_ENV === "development") {
