@@ -6,8 +6,19 @@ import App from "./App";
 // mount
 const mount = (el, { onNavigate = () => {} } = {}) => {
   const history = createMemoryHistory();
-  history.listen(onNavigate);
+
+  if (onNavigate) {
+    history.listen(onNavigate);
+  }
   ReactDOM.render(<App history={history} />, el);
+  return {
+    onParentNavigate({ pathname: nextPathname }) {
+      const { pathname } = history.location;
+      if (pathname !== nextPathname) {
+        history.push(nextPathname);
+      }
+    },
+  };
 };
 // immediately
 if (process.env.NODE_ENV === "development") {
